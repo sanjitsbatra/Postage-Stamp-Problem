@@ -1,0 +1,105 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3154,         96]
+NotebookOptionsPosition[      2693,         76]
+NotebookOutlinePosition[      3147,         94]
+CellTagsIndexPosition[      3104,         91]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"PSPN", "[", 
+    RowBox[{"l_", ",", "h_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"i", ",", "list", ",", 
+       RowBox[{"c", "=", "0"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", "=", "1"}], ",", 
+        RowBox[{"i", "\[LessEqual]", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Last", "[", "l", "]"}], "*", "h"}], ")"}]}], ",", " ", 
+        RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"list", "=", 
+          RowBox[{"FrobeniusSolve", "[", 
+           RowBox[{"l", ",", "i"}], "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"list", "=", 
+          RowBox[{"Plus", "@@@", "list"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Min", "[", "list", "]"}], ">", "h"}], ",", 
+           RowBox[{"Break", "[", "]"}], ",", 
+           RowBox[{"c", "=", 
+            RowBox[{"c", "+", "1"}]}]}], "]"}], ";"}]}], 
+       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"c", "+", "1"}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.560001239734249*^9, 3.560001240340064*^9}, {
+   3.5600012896455507`*^9, 3.5600013088404827`*^9}, 3.560001596918221*^9, {
+   3.56000173832798*^9, 3.56000175981557*^9}, 3.560001931666325*^9, 
+   3.5600026136847343`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PSPN", "[", 
+  RowBox[{
+   RowBox[{"{", "1", "}"}], ",", "6"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5601666473241167`*^9, 3.560166662082416*^9}, {
+  3.56016673731721*^9, 3.560166747404039*^9}, {3.560167285596962*^9, 
+  3.560167309456991*^9}, {3.560167378924967*^9, 3.5601673851965218`*^9}, {
+  3.560167426465048*^9, 3.5601674712538633`*^9}, {3.5601675545170794`*^9, 
+  3.5601675555370913`*^9}}],
+
+Cell[BoxData["200"], "Output",
+ CellChangeTimes->{3.560166703851438*^9, 3.5601669357741632`*^9, 
+  3.5601673182421503`*^9, 3.5601674289516907`*^9, 3.560167502668651*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{Automatic, 31}, {Automatic, 18}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.5, 1.5 Inherited],
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1502, 37, 203, "Input"],
+Cell[CellGroupData[{
+Cell[2084, 61, 421, 8, 40, "Input"],
+Cell[2508, 71, 169, 2, 40, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,144 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4077,        134]
+NotebookOptionsPosition[      3611,        113]
+NotebookOutlinePosition[      3995,        130]
+CellTagsIndexPosition[      3952,        127]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"CheckPSP", "[", "h_", "]"}], "[", 
+   RowBox[{"l_", ",", "S_", ",", "E_", ",", "Flag_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"list", "=", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"c", "=", 
+       RowBox[{"S", "-", "1"}]}], ",", 
+      RowBox[{"result", "=", "0"}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "S"}], ",", 
+       RowBox[{"i", "\[LessEqual]", "E"}], ",", " ", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"list", "=", 
+         RowBox[{"FrobeniusSolve", "[", 
+          RowBox[{"l", ",", "i"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"list", "=", 
+         RowBox[{"Plus", "@@@", "list"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Min", "[", "list", "]"}], ">", "h"}], ",", 
+          RowBox[{"Break", "[", "]"}], ",", 
+          RowBox[{
+           RowBox[{"c", "=", 
+            RowBox[{"c", "+", "1"}]}], ";", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"Mod", "[", 
+                RowBox[{"c", ",", "3"}], "]"}], "\[Equal]", "0"}], "&&", 
+              RowBox[{"Flag", "\[Equal]", "1"}]}], ",", 
+             RowBox[{"Print", "[", "c", "]"}]}], "]"}], ";"}]}], "]"}], 
+        ";"}]}], "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+     "c"}]}], "\[IndentingNewLine]", "]"}]}]], "Code"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"RSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"a", "[", "n", "]"}], "\[Equal]", 
+        RowBox[{
+         RowBox[{"2", "*", 
+          RowBox[{"a", "[", 
+           RowBox[{"n", "-", "1"}], "]"}]}], "+", "3"}]}], ",", 
+       RowBox[{
+        RowBox[{"a", "[", "1", "]"}], "==", "1"}]}], "}"}], ",", 
+     RowBox[{"a", "[", "n", "]"}], ",", "n"}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.553581777306601*^9, 3.553581872753079*^9}, {
+  3.5535819050445023`*^9, 3.553581927284038*^9}, {3.5535820458773193`*^9, 
+  3.5535821458056107`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", "[", "n", "]"}], "/.", 
+     RowBox[{"First", "[", "%", "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "10"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "5", ",", "13", ",", "29", ",", "61", ",", "125", ",", "253", ",",
+    "509", ",", "1021", ",", "2045"}], "}"}]], "Output",
+ CellChangeTimes->{{3.5535821521820793`*^9, 3.553582159207254*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CheckPSP", "[", "h", "]"}], "[", 
+  RowBox[{"GenList", "["}]}]], "Input",
+ CellChangeTimes->{{3.553582329881103*^9, 3.553582348197062*^9}}]
+},
+WindowSize->{740, 752},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1634, 43, 235, "Code"],
+Cell[2194, 65, 688, 19, 94, "Input"],
+Cell[CellGroupData[{
+Cell[2907, 88, 265, 9, 69, "Input"],
+Cell[3175, 99, 243, 5, 43, "Output"]
+}, Open  ]],
+Cell[3433, 107, 174, 4, 43, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

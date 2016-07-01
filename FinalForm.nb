@@ -1,0 +1,105 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2982,         95]
+NotebookOptionsPosition[      2627,         79]
+NotebookOutlinePosition[      3083,         97]
+CellTagsIndexPosition[      3040,         94]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"Final", " ", 
+  RowBox[{"Setup", ":", "\[IndentingNewLine]", " ", 
+   RowBox[{"Given", " ", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "=", "a1"}], ",", "a2", ",", 
+       RowBox[{
+        RowBox[{"a3", "..."}], "."}], ",", "ak"}], "}"}], ",", " ", "h"}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"The", " ", "following", " ", "must", " ", "be", " ", "satisfied", 
+  " ", "for", " ", "the", " ", "numbers", " ", "to", " ", "span", " ", "from",
+   " ", "1", " ", "to", " ", "ak", "*", 
+  RowBox[{"h", ":", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"a2", "\[LessEqual]", 
+    RowBox[{"h", "+", "1"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"a3", "\[LessEqual]", 
+  RowBox[{
+   RowBox[{"N", "[", "h", "]"}], 
+   RowBox[{"(", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "a2"}], "}"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"...", ".", "\[IndentingNewLine]", "a"}], 
+    RowBox[{"(", 
+     RowBox[{"k", "-", "2"}], ")"}]}], "\[LessEqual]", " ", 
+   RowBox[{
+    RowBox[{"N", "[", "h", "]"}], 
+    RowBox[{"(", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "a1", ",", 
+       RowBox[{
+        RowBox[{"a2", "..."}], "a", 
+        RowBox[{"(", 
+         RowBox[{"k", "-", "3"}], ")"}]}]}], "}"}], ")"}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Also", ",", " ", 
+   RowBox[{
+    RowBox[{"ak", "-", 
+     RowBox[{"a", 
+      RowBox[{"(", 
+       RowBox[{"k", "-", "1"}], ")"}]}]}], "=", "1"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Apart", " ", "from", " ", "this", " ", "there", " ", "is", " ", "a",
+   " ", "relation", " ", 
+  RowBox[{"between", ":", "\[IndentingNewLine]", 
+   RowBox[{"a", 
+    RowBox[{"(", 
+     RowBox[{"k", "-", "2"}], ")"}], " ", "and", " ", "a", 
+    RowBox[{"(", 
+     RowBox[{"k", "-", "1"}], ")"}], " ", "which", " ", "is", " ", "to", " ", 
+    "be", " ", 
+    RowBox[{"found", "."}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.552913545116744*^9, 3.552913726062999*^9}}]
+},
+WindowSize->{740, 752},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 2066, 57, 262, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
